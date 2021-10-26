@@ -1,6 +1,6 @@
 package com.chenkai.pojo;
 
-/**
+/**com.chenkai.pojo.Student
  * @author chenkai
  **/
 public class Student {
