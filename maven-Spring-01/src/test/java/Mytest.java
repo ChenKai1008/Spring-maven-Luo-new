@@ -1,3 +1,4 @@
+import com.chenkai.pojo.Person;
 import com.chenkai.pojo.Student;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -12,5 +13,7 @@ public class Mytest {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
         Student student = applicationContext.getBean("student", Student.class);
         System.out.println(student);
+        Person person = applicationContext.getBean("person", Person.class);
+        System.out.println(person);
     }
 }
