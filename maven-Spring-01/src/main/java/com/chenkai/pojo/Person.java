@@ -1,5 +1,6 @@
 package com.chenkai.pojo;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.security.Principal;
@@ -13,16 +14,15 @@ import java.sql.SQLOutput;
 public class Person {
     private String name;
     private int age;
-    Person(){
-        System.out.println("person初始化");
+
+    @Value("我啥都没干")
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public int getAge() {
-        return age;
+    @Value("250")
+    public void setAge(int age) {
+        this.age = age;
     }
 
     @Override
